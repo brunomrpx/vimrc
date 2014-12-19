@@ -27,7 +27,10 @@
 
 " Configuration
 syntax on
-colorscheme railscasts
+syntax enable
+set t_Co=256
+set background=dark
+silent! colorscheme railscasts
 set number
 set autoindent
 set tabstop=4

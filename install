@@ -1,0 +1,9 @@
+# Instalando Vundle
+git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+
+# Copiando o .vimrc
+cp ./.vimrc ~/
+
+# Atualizando/baixando Plugins
+vim -c VundleUpdate -c quitall
+
