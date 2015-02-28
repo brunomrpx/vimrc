@@ -1,4 +1,5 @@
 " Configuration
+set t_Co=256
 colorscheme murphy
 set number
 set autoindent
