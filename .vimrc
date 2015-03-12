@@ -39,3 +39,8 @@ set expandtab
 set nowrap
 set linebreak
 set laststatus=2
+set cursorline
+set cursorcolumn
+set wildmenu
+set hlsearch
+set incsearch
