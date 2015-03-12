@@ -25,6 +25,9 @@
     " Indent
     Bundle 'Yggdroot/indentLine'
 
+    " Finder
+    Bundle 'kien/ctrlp.vim'
+
     call vundle#end()
     filetype plugin indent on
 
@@ -47,3 +50,6 @@ set cursorcolumn
 set wildmenu
 set hlsearch
 set incsearch
+let g:indentLine_leadingSpaceChar = '·'
+let g:indentLine_leadingSpaceEnabled = '1'
+let g:indentLine_char = '|'
