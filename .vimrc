@@ -20,7 +20,7 @@
         Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
     " Colorscheme
-    Bundle 'chankaward/vim-railscasts-theme'
+    Bundle 'flazz/vim-colorschemes'
 
     call vundle#end()
     filetype plugin indent on
@@ -30,7 +30,7 @@ syntax on
 syntax enable
 set t_Co=256
 set background=dark
-silent! colorscheme railscasts
+silent! colorscheme badwolf
 set number
 set autoindent
 set tabstop=4
