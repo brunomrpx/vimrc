@@ -22,6 +22,9 @@
     " Colorscheme
     Bundle 'flazz/vim-colorschemes'
 
+    " Indent
+    Bundle 'Yggdroot/indentLine'
+
     call vundle#end()
     filetype plugin indent on
 
