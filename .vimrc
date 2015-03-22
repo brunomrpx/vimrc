@@ -20,7 +20,7 @@
         Bundle 'chrisgillis/vim-bootstrap3-snippets'
 
     " Colorscheme
-    Bundle 'flazz/vim-colorschemes'
+    Bundle 'sjl/badwolf'
 
     " Indent
     Bundle 'Yggdroot/indentLine'
