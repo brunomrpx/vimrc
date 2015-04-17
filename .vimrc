@@ -12,13 +12,6 @@
     " Files
     Bundle 'scrooloose/nerdtree'
 
-    " Snippets
-    Bundle "MarcWeber/vim-addon-mw-utils"
-    Bundle "tomtom/tlib_vim"
-    Bundle "garbas/vim-snipmate"
-        " Bootstrap
-        Bundle 'chrisgillis/vim-bootstrap3-snippets'
-
     " Colorscheme
     Bundle 'sjl/badwolf'
 
@@ -27,6 +20,10 @@
 
     " Finder
     Bundle 'kien/ctrlp.vim'
+
+    Bundle 'jiangmiao/auto-pairs'
+    Bundle 'bronson/vim-trailing-whitespace'
+    Bundle 'jistr/vim-nerdtree-tabs'
 
     call vundle#end()
     filetype plugin indent on
@@ -38,7 +35,7 @@ set t_Co=256
 set background=dark
 silent! colorscheme badwolf
 set number
-set autoindent
+set smartindent 
 set tabstop=4
 set shiftwidth=4
 set expandtab
@@ -46,10 +43,8 @@ set nowrap
 set linebreak
 set laststatus=2
 set cursorline
-set cursorcolumn
 set wildmenu
 set hlsearch
 set incsearch
-let g:indentLine_leadingSpaceChar = '·'
-let g:indentLine_leadingSpaceEnabled = '1'
 let g:indentLine_char = '|'
+let g:nerdtree_tabs_open_on_console_startup=1
