@@ -24,6 +24,7 @@
     Bundle 'jiangmiao/auto-pairs'
     Bundle 'bronson/vim-trailing-whitespace'
     Bundle 'jistr/vim-nerdtree-tabs'
+    Bundle 'itchyny/lightline.vim'
 
     call vundle#end()
     filetype plugin indent on
