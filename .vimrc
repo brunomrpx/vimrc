@@ -48,4 +48,3 @@ set wildmenu
 set hlsearch
 set incsearch
 let g:indentLine_char = '|'
-let g:nerdtree_tabs_open_on_console_startup=1
