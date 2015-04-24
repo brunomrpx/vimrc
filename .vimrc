@@ -25,6 +25,7 @@
     Bundle 'bronson/vim-trailing-whitespace'
     Bundle 'jistr/vim-nerdtree-tabs'
     Bundle 'itchyny/lightline.vim'
+    Bundle 'scrooloose/nerdcommenter'
 
     call vundle#end()
     filetype plugin indent on
