@@ -27,6 +27,8 @@
     Bundle 'itchyny/lightline.vim'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'mattn/emmet-vim'
+    Bundle 'chrisyip/Better-CSS-Syntax-for-Vim'
+    Bundle 'groenewege/vim-less'
 
     call vundle#end()
     filetype plugin indent on
@@ -49,4 +51,5 @@ set cursorline
 set wildmenu
 set hlsearch
 set incsearch
+set title
 let g:indentLine_char = '|'
