@@ -26,6 +26,9 @@
     Bundle 'jistr/vim-nerdtree-tabs'
     Bundle 'itchyny/lightline.vim'
     Bundle 'scrooloose/nerdcommenter'
+    Bundle 'mattn/emmet-vim'
+    Bundle 'hail2u/vim-css3-syntax'
+    Bundle 'othree/html5-syntax.vim'
 
     call vundle#end()
     filetype plugin indent on
