@@ -27,8 +27,9 @@
     Bundle 'itchyny/lightline.vim'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'mattn/emmet-vim'
-    Bundle 'chrisyip/Better-CSS-Syntax-for-Vim'
     Bundle 'groenewege/vim-less'
+    Bundle 'hail2u/vim-css3-syntax'
+    Bundle 'othree/html5-syntax.vim'
 
     call vundle#end()
     filetype plugin indent on
