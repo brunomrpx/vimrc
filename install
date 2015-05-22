@@ -1,9 +1,23 @@
-# Instalando Vundle
-git clone https://github.com/gmarik/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+#!/bin/sh
 
-# Copiando o .vimrc
-cp ./.vimrc ~/
+echo 'Installing...'
 
-# Atualizando/baixando Plugins
+vundleFolder=~/.vim/bundle/Vundle.vim/
+
+# install vundle if is not intalled
+if [ ! -d $vundleFolder ]; then
+    git clone https://github.com/gmarik/Vundle.vim.git $vundleFolder
+fi
+
+# bakcup old vimrc
+echo "Copying new vimc..."
+mv ~/.vimrc ~/.vimrc.bpk
+
+# install new vimrc
+cp ./.vimrc ~/.vimrc
+
+# update plugins
+echo 'Installing plugins...'
 vim -c VundleUpdate -c quitall
 
+echo 'Finished.'
