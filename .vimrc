@@ -24,12 +24,16 @@
     Bundle 'jiangmiao/auto-pairs'
     Bundle 'bronson/vim-trailing-whitespace'
     Bundle 'jistr/vim-nerdtree-tabs'
-    Bundle 'itchyny/lightline.vim'
+
+    Bundle 'Lokaltog/vim-powerline'
     Bundle 'scrooloose/nerdcommenter'
     Bundle 'mattn/emmet-vim'
+    Bundle 'chrisyip/Better-CSS-Syntax-for-Vim'
     Bundle 'groenewege/vim-less'
-    Bundle 'hail2u/vim-css3-syntax'
-    Bundle 'othree/html5-syntax.vim'
+    Bundle 'pangloss/vim-javascript'
+    Bundle 'airblade/vim-gitgutter'
+    Bundle 'maksimr/vim-jsbeautify'
+    Bundle 'tpope/vim-fugitive'
 
     call vundle#end()
     filetype plugin indent on
@@ -41,11 +45,11 @@ set t_Co=256
 set background=dark
 silent! colorscheme badwolf
 set number
-set smartindent 
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set nowrap
+set wrap
 set linebreak
 set laststatus=2
 set cursorline
