@@ -10,7 +10,7 @@ if [ ! -d $vundleFolder ]; then
 fi
 
 # bakcup old vimrc
-echo "Copying new vimc..."
+echo "Copying new vimrc..."
 mv ~/.vimrc ~/.vimrc.bpk
 
 # install new vimrc
