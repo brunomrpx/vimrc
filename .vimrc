@@ -58,3 +58,5 @@ set hlsearch
 set incsearch
 set title
 let g:indentLine_char = '|'
+highlight NonText ctermbg=none
+highlight Normal ctermbg=none
