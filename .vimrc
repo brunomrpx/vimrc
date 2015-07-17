@@ -48,6 +48,12 @@
         Bundle 'maksimr/vim-jsbeautify'
         Bundle 'bronson/vim-trailing-whitespace'
 
+        " EditorConfig
+        Bundle 'editorconfig/editorconfig-vim'
+
+        " Taglist
+        Bundle 'vim-scripts/taglist.vim'
+
     call vundle#end()
     filetype plugin indent on
 
