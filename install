@@ -1,2 +1,12 @@
-# Copiando o .vimrc
-cp ./.vimrc ~/
+#!/bin/sh
+
+echo 'Installing...'
+
+# bakcup old vimrc
+echo "Copying new vimrc..."
+mv ~/.vimrc ~/.vimrc.bpk
+
+# install new vimrc
+cp ./.vimrc ~/.vimrc
+
+echo 'Finished.'

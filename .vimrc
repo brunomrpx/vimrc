@@ -1,16 +1,20 @@
-" Configuration
+syntax on
+syntax enable
 set t_Co=256
-colorscheme murphy
+set background=dark
+silent! colorscheme peachpuff 
 set number
-set autoindent
+set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set nowrap
+set wrap
 set linebreak
 set laststatus=2
 set cursorline
-set cursorcolumn
 set wildmenu
 set hlsearch
-set incsearch   
+set incsearch
+set title
+highlight NonText ctermbg=none
+highlight Normal ctermbg=none
