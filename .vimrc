@@ -20,9 +20,6 @@
         " Indent
         Bundle 'Yggdroot/indentLine'
 
-        " Finder
-        Bundle 'kien/ctrlp.vim'
-
         " Improve tabs
         Bundle 'jistr/vim-nerdtree-tabs'
 
@@ -51,9 +48,6 @@
         " EditorConfig
         Bundle 'editorconfig/editorconfig-vim'
 
-        " Taglist
-        Bundle 'vim-scripts/taglist.vim'
-
     call vundle#end()
     filetype plugin indent on
 
@@ -76,13 +70,16 @@
     set cursorline
     set wildmenu
     set hlsearch
+    set lazyredraw
+    set showmatch
     set incsearch
     set title
-    highlight NonText ctermbg=none
-    highlight Normal ctermbg=none
-
-" -------------------------
-" | Plugins Configuration |
-" -------------------------
-    let g:indentLine_char = '|'
-
+    set noswapfile
+    set so=10
+    set ruler
+    set autoindent
+    set ignorecase
+    set smartcase
+    set autoread
+    filetype plugin on
+    filetype indent on
