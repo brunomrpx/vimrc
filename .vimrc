@@ -16,6 +16,7 @@
 
         " Colorscheme
         Bundle 'sjl/badwolf'
+        Bundle 'morhetz/gruvbox'
 
         " Indent
         Bundle 'Yggdroot/indentLine'
@@ -58,7 +59,7 @@
     syntax enable
     set t_Co=256
     set background=dark
-    silent! colorscheme badwolf
+    silent! colorscheme gruvbox
     set number
     set smartindent
     set tabstop=4
