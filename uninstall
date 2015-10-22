@@ -1,0 +1,10 @@
+#!/bin/sh
+
+echo 'Uninstalling...'
+
+rm ~/.vimrc
+if [ -f ~/.vimrc.bkp ]; then
+    mv ~/.vimrc.bkp ~/.vimrc
+fi
+
+echo 'Finished'
