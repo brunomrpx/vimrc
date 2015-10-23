@@ -82,5 +82,7 @@
     set ignorecase
     set smartcase
     set autoread
+    set colorcolumn=80
     filetype plugin on
     filetype indent on
+
