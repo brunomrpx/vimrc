@@ -50,6 +50,8 @@ Bundle 'bronson/vim-trailing-whitespace'
 " EditorConfig
 Bundle 'editorconfig/editorconfig-vim'
 
+Bundle 'Raimondi/delimitMate'
+
 call vundle#end()
 filetype plugin indent on
 
@@ -88,4 +90,4 @@ set splitbelow
 filetype plugin on
 filetype indent on
 
-let g:nerdtree_tabs_open_on_console_startup=1
+imap <C-Enter> <CR><Esc>O
