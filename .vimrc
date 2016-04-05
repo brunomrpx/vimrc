@@ -62,7 +62,7 @@ syntax on
 syntax enable
 set t_Co=256
 set background=dark
-silent! colorscheme solarized
+silent! colorscheme badwolf
 set number
 set smartindent
 set tabstop=4
@@ -89,5 +89,7 @@ set splitright
 set splitbelow
 filetype plugin on
 filetype indent on
+autocmd BufNewFile,BufRead *.ts set syntax=javascript
 
 imap <C-Enter> <CR><Esc>O
+
