@@ -68,7 +68,6 @@ set smartindent
 set tabstop=4
 set shiftwidth=4
 set expandtab
-set wrap
 set linebreak
 set laststatus=2
 set cursorline
@@ -78,6 +77,7 @@ set lazyredraw
 set showmatch
 set incsearch
 set title
+set nowrap
 set noswapfile
 set so=10
 set ruler
@@ -87,9 +87,15 @@ set smartcase
 set autoread
 set splitright
 set splitbelow
+set mouse=a
 filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufRead *.ts set syntax=javascript
 
-imap <C-Enter> <CR><Esc>O
+hi NonText ctermbg=none
+hi Normal ctermbg=none
+
+imap <C-J> <CR><Esc>O
+
+map <C-k><C-b> :NERDTreeToggle<CR>
 
