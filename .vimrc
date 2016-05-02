@@ -19,14 +19,23 @@ Bundle 'sjl/badwolf'
 Bundle 'morhetz/gruvbox'
 Bundle 'altercation/vim-colors-solarized'
 
-" Indent
-Bundle 'Yggdroot/indentLine'
+" HTML
+Bundle 'gregsexton/MatchTag'
+
+" Snippets
+Bundle 'MarcWeber/vim-addon-mw-utils'
+Bundle 'tomtom/tlib_vim'
+Bundle 'garbas/vim-snipmate'
+Bundle 'honza/vim-snippets'
 
 " Improve tabs
 Bundle 'jistr/vim-nerdtree-tabs'
 
 " Improve status bar
 Bundle 'Lokaltog/vim-powerline'
+
+" file search
+Bundle 'ctrlpvim/ctrlp.vim'
 
 " Comments
 Bundle 'scrooloose/nerdcommenter'
