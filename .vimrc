@@ -60,6 +60,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 Bundle 'editorconfig/editorconfig-vim'
 
 Bundle 'Raimondi/delimitMate'
+Bundle 'scrooloose/syntastic'
 
 call vundle#end()
 filetype plugin indent on
@@ -68,7 +69,6 @@ filetype plugin indent on
 " | Global Configuration |
 " ------------------------
 syntax on
-syntax enable
 set t_Co=256
 set background=dark
 silent! colorscheme badwolf
@@ -79,7 +79,7 @@ set shiftwidth=4
 set expandtab
 set linebreak
 set laststatus=2
-set cursorline
+"set cursorline
 set wildmenu
 set hlsearch
 set lazyredraw
@@ -88,7 +88,7 @@ set incsearch
 set title
 set nowrap
 set noswapfile
-set so=10
+"set so=10
 set ruler
 set autoindent
 set ignorecase
@@ -97,6 +97,7 @@ set autoread
 set splitright
 set splitbelow
 set mouse=a
+set clipboard=unnamed
 filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufRead *.ts set syntax=javascript
@@ -107,4 +108,20 @@ hi Normal ctermbg=none
 imap <C-J> <CR><Esc>O
 
 map <C-k><C-b> :NERDTreeToggle<CR>
+
+" --------------------------
+" | SYNTASTIC CONFIGURATION |
+" -------------------------
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
+" eslint configuration
+let g:syntastic_javascript_checkers = ['eslint']
+let g:syntastic_javascript_eslint_exec = 'eslint_d'
 
