@@ -74,8 +74,8 @@ set background=dark
 silent! colorscheme badwolf
 set number
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set linebreak
 set laststatus=2
@@ -124,4 +124,7 @@ let g:syntastic_check_on_wq = 0
 " eslint configuration
 let g:syntastic_javascript_checkers = ['eslint']
 let g:syntastic_javascript_eslint_exec = 'eslint_d'
+let g:syntastic_mode_map = {
+    \ "mode": "active",
+    \ "passive_filetypes": ["html", "xml"] }
 
