@@ -65,7 +65,7 @@ syntax on
 syntax enable
 set t_Co=256
 set background=dark
-silent! colorscheme peachpuff
+silent! colorscheme default
 set nonumber
 set smartindent
 set tabstop=2
@@ -105,5 +105,6 @@ map <C-k><C-b> :NERDTreeTabsToggle<CR>
 vmap <C-x> :!pbcopy<CR>
 vmap <C-c> :w !pbcopy<CR><CR>
 
+" Syntax hightlight in .js files
 let g:jsx_ext_required = 0
 
