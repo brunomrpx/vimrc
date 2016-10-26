@@ -14,11 +14,6 @@ Bundle 'gmarik/Vundle.vim'
 " Improve file tree
 Bundle 'scrooloose/nerdtree'
 
-" Colorscheme
-Bundle 'sjl/badwolf'
-Bundle 'morhetz/gruvbox'
-Bundle 'altercation/vim-colors-solarized'
-
 " HTML
 Bundle 'gregsexton/MatchTag'
 
@@ -30,9 +25,6 @@ Bundle 'honza/vim-snippets'
 
 " Improve tabs
 Bundle 'jistr/vim-nerdtree-tabs'
-
-" Improve status bar
-Bundle 'Lokaltog/vim-powerline'
 
 " file search
 Bundle 'ctrlpvim/ctrlp.vim'
@@ -47,6 +39,7 @@ Bundle 'mattn/emmet-vim'
 Bundle 'chrisyip/Better-CSS-Syntax-for-Vim'
 Bundle 'groenewege/vim-less'
 Bundle 'pangloss/vim-javascript'
+Bundle 'mxw/vim-jsx'
 
 " Version control system
 Bundle 'airblade/vim-gitgutter'
@@ -59,6 +52,7 @@ Bundle 'bronson/vim-trailing-whitespace'
 " EditorConfig
 Bundle 'editorconfig/editorconfig-vim'
 
+" Automatic closing of quotes, parenthesis, brackets, etc.
 Bundle 'Raimondi/delimitMate'
 
 call vundle#end()
@@ -71,15 +65,15 @@ syntax on
 syntax enable
 set t_Co=256
 set background=dark
-silent! colorscheme badwolf
-set number
+silent! colorscheme peachpuff
+set nonumber
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set linebreak
 set laststatus=2
-set cursorline
+set nocursorline
 set wildmenu
 set hlsearch
 set lazyredraw
@@ -101,10 +95,15 @@ filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufRead *.ts set syntax=javascript
 
-hi NonText ctermbg=none
-hi Normal ctermbg=none
+"hi NonText ctermbg=none
+"hi Normal ctermbg=none
 
 imap <C-J> <CR><Esc>O
 
-map <C-k><C-b> :NERDTreeToggle<CR>
+map <C-k><C-b> :NERDTreeTabsToggle<CR>
+
+vmap <C-x> :!pbcopy<CR>
+vmap <C-c> :w !pbcopy<CR><CR>
+
+let g:jsx_ext_required = 0
 
