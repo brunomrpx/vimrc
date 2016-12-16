@@ -2,12 +2,21 @@
 
 echo 'Installing...'
 
-vundleFolder=~/.vim/bundle/Vundle.vim/
+# installing plug.vim
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+      https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# install vundle if is not intalled
-if [ ! -d $vundleFolder ]; then
-    git clone https://github.com/gmarik/Vundle.vim.git $vundleFolder
-fi
+# adding powerline fonts
+mkdir ~/.vim/powerline-fonts/
+git clone https://github.com/powerline/fonts ~/.vim/powerline-fonts/
+(
+  cd ~/.vim/powerline-fonts/ \ 
+  ./install.sh
+  rm -rf ~/.vim/powerline-fonts/
+)
+
+# installing typescript
+npm install -g typescript
 
 # bakcup old vimrc
 echo "Copying new vimrc..."
@@ -16,8 +25,5 @@ mv ~/.vimrc ~/.vimrc.bpk
 # install new vimrc
 cp ./.vimrc ~/.vimrc
 
-# update plugins
-echo 'Installing plugins...'
-vim -c VundleUpdate -c quitall
-
 echo 'Finished.'
+

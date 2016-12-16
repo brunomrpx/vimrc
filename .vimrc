@@ -1,85 +1,37 @@
-" ------------------------------
-" | Vundle - Plugin Management |
-" ------------------------------
-set nocompatible " be iMproved
-filetype off
+" Plugins dependencies
+call plug#begin('~/.vim/plugged')
 
-" Set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdtree'
+Plug 'gregsexton/MatchTag'
+Plug 'ctrlpvim/ctrlp.vim'
+Plug 'scrooloose/nerdcommenter'
+Plug 'mattn/emmet-vim'
+Plug 'pangloss/vim-javascript'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-fugitive'
+Plug 'maksimr/vim-jsbeautify'
+Plug 'bronson/vim-trailing-whitespace'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'Raimondi/delimitMate'
+Plug 'Shougo/vimproc.vim', { 'do': 'make' }
+Plug 'Quramy/tsuquyomi'
 
-" let Vundle manage Vundle
-Bundle 'gmarik/Vundle.vim'
+call plug#end()
 
-" Improve file tree
-Bundle 'scrooloose/nerdtree'
-
-" Colorscheme
-Bundle 'sjl/badwolf'
-Bundle 'morhetz/gruvbox'
-Bundle 'altercation/vim-colors-solarized'
-
-" HTML
-Bundle 'gregsexton/MatchTag'
-
-" Snippets
-Bundle 'MarcWeber/vim-addon-mw-utils'
-Bundle 'tomtom/tlib_vim'
-Bundle 'garbas/vim-snipmate'
-Bundle 'honza/vim-snippets'
-
-" Improve tabs
-Bundle 'jistr/vim-nerdtree-tabs'
-
-" Improve status bar
-Bundle 'Lokaltog/vim-powerline'
-
-" file search
-Bundle 'ctrlpvim/ctrlp.vim'
-
-" Comments
-Bundle 'scrooloose/nerdcommenter'
-
-" Emmet - construct HTML fast
-Bundle 'mattn/emmet-vim'
-
-" Syntax
-Bundle 'chrisyip/Better-CSS-Syntax-for-Vim'
-Bundle 'groenewege/vim-less'
-Bundle 'pangloss/vim-javascript'
-
-" Version control system
-Bundle 'airblade/vim-gitgutter'
-Bundle 'tpope/vim-fugitive'
-
-" Formatters
-Bundle 'maksimr/vim-jsbeautify'
-Bundle 'bronson/vim-trailing-whitespace'
-
-" EditorConfig
-Bundle 'editorconfig/editorconfig-vim'
-
-Bundle 'Raimondi/delimitMate'
-
-call vundle#end()
-filetype plugin indent on
-
-" ------------------------
-" | Global Configuration |
-" ------------------------
+" Global configuration
 syntax on
-syntax enable
 set t_Co=256
 set background=dark
-silent! colorscheme badwolf
+silent! colorscheme default
 set number
 set smartindent
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
 set expandtab
 set linebreak
 set laststatus=2
-set cursorline
+"set cursorline
 set wildmenu
 set hlsearch
 set lazyredraw
@@ -88,7 +40,7 @@ set incsearch
 set title
 set nowrap
 set noswapfile
-set so=10
+"set so=10
 set ruler
 set autoindent
 set ignorecase
@@ -97,6 +49,7 @@ set autoread
 set splitright
 set splitbelow
 set mouse=a
+set clipboard=unnamed
 filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufRead *.ts set syntax=javascript
@@ -104,7 +57,10 @@ autocmd BufNewFile,BufRead *.ts set syntax=javascript
 hi NonText ctermbg=none
 hi Normal ctermbg=none
 
-imap <C-J> <CR><Esc>O
+" Plugins configurations
+let g:airline#extensions#tabline#enabled = 1
+let g:airline_powerline_fonts = 1
 
+" Mappings
 map <C-k><C-b> :NERDTreeToggle<CR>
 
