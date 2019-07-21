@@ -24,6 +24,7 @@ syntax on
 set t_Co=256
 set background=dark
 silent! colorscheme default
+set encoding=utf-8
 set number
 set smartindent
 set tabstop=2
