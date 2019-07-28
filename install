@@ -6,24 +6,18 @@ echo 'Installing...'
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# adding powerline fonts
-mkdir ~/.vim/powerline-fonts/
-git clone https://github.com/powerline/fonts ~/.vim/powerline-fonts/
-(
-  cd ~/.vim/powerline-fonts/ \ 
-  ./install.sh
-  rm -rf ~/.vim/powerline-fonts/
-)
-
-# installing typescript
-npm install -g typescript
-
 # bakcup old vimrc
 echo "Copying new vimrc..."
-mv ~/.vimrc ~/.vimrc.bpk
+if [ -e ~/.vimrc ];then
+  echo "Backing up current vim file"
+  mv ~/.vimrc ~/.vimrc.bpk
+fi
 
 # install new vimrc
 cp ./.vimrc ~/.vimrc
+
+echo 'Installing plugins...'
+vim -c PlugInstall -c quitall
 
 echo 'Finished.'
 
