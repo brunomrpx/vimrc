@@ -2,7 +2,7 @@ syntax on
 syntax enable
 set t_Co=256
 set background=dark
-colorscheme peachpuff 
+colorscheme murphy
 set number
 set smartindent
 set tabstop=4
