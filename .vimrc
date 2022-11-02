@@ -16,6 +16,9 @@ Plug 'editorconfig/editorconfig-vim'
 Plug 'Raimondi/delimitMate'
 Plug 'Shougo/vimproc.vim', { 'do': 'make' }
 Plug 'Quramy/tsuquyomi'
+Plug 'morhetz/gruvbox'
+Plug 'dense-analysis/ale'
+Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
 
 call plug#end()
 
@@ -23,7 +26,7 @@ call plug#end()
 syntax on
 set t_Co=256
 set background=dark
-silent! colorscheme default
+silent! colorscheme gruvbox
 set encoding=utf-8
 set number
 set smartindent
@@ -32,7 +35,7 @@ set shiftwidth=2
 set expandtab
 set linebreak
 set laststatus=2
-"set cursorline
+set cursorline
 set wildmenu
 set hlsearch
 set lazyredraw
@@ -41,7 +44,7 @@ set incsearch
 set title
 set nowrap
 set noswapfile
-"set so=10
+set so=10
 set ruler
 set autoindent
 set ignorecase
@@ -51,6 +54,7 @@ set splitright
 set splitbelow
 set mouse=a
 set clipboard=unnamed
+set colorcolumn=120
 filetype plugin on
 filetype indent on
 autocmd BufNewFile,BufRead *.ts set syntax=javascript
@@ -58,10 +62,20 @@ autocmd BufNewFile,BufRead *.ts set syntax=javascript
 hi NonText ctermbg=none
 hi Normal ctermbg=none
 
+let mapleader=","
+
 " Plugins configurations
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
+let g:ale_completion_enabled = 1
 
-" Mappings
+" Open file tree
 map <C-k><C-b> :NERDTreeToggle<CR>
+
+" Paste without copying
+vnoremap <leader>p "_dP
+
+" Go to declaration
+nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
+nnoremap <leader>r :YcmCompleter GoToReferences<CR>
 

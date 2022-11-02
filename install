@@ -2,22 +2,25 @@
 
 echo 'Installing...'
 
-# installing plug.vim
+# Install dependencies
+brew install macvim cmake
+pip3 install python-lsp-server
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
       https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
-# bakcup old vimrc
+# Bakcup current vim config
 echo "Copying new vimrc..."
 if [ -e ~/.vimrc ];then
-  echo "Backing up current vim file"
+  echo "Backing up current vim config"
   mv ~/.vimrc ~/.vimrc.bpk
 fi
 
-# install new vimrc
+# Install new vimrc
 cp ./.vimrc ~/.vimrc
 
 echo 'Installing plugins...'
 vim -c PlugInstall -c quitall
 
+exec zsh -l
 echo 'Finished.'
 
