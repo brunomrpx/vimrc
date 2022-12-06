@@ -19,6 +19,8 @@ Plug 'Quramy/tsuquyomi'
 Plug 'morhetz/gruvbox'
 Plug 'dense-analysis/ale'
 Plug 'ycm-core/YouCompleteMe', { 'do': './install.py' }
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+Plug 'rodjek/vim-puppet'
 
 call plug#end()
 
@@ -78,4 +80,8 @@ vnoremap <leader>p "_dP
 " Go to declaration
 nnoremap <leader>d :YcmCompleter GoToDeclaration<CR>
 nnoremap <leader>r :YcmCompleter GoToReferences<CR>
+
+" Format selected content
+xmap <leader>f  <Plug>(coc-format-selected)
+nmap <leader>f  <Plug>(coc-format-selected)
 
